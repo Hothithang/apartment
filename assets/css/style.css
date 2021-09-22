@@ -70,21 +70,18 @@ header a:hover {
 .container {
     border-right: 1px solid #ccc;
 }
-.content-article {
-    
-}
-
 section .slider img {
     width: 25%;
     opacity: 0.6;
 }
 
-.part button {
+.part button,
+#contact button{
     color: #fff;
     background-color: #4CAF50;
     border: none;
     width: 30vh;
-    padding: 12px;
+    padding: 10px;
 }
 
 .part button:hover {
