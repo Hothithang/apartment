@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./grid_js.js"></script>
+    <title>Apartment</title>
+</head>
+<body>
+    <div class="container">
+        <header class="">
+            <nav class="navbar navbar-expand-lg">
+                <p>Rental</p>
+                <a onclick="open_click()" href="javascript:void(0)"><i class="fa fa-bars text-white p-3"></i></a>
+            </nav>
+        </header> 
+
+        <main class="row">
+            <aside class="">
+                <div class="content-aside">
+                    <div id="navClick" class="fixed content-aside px-4"> 
+                        <a style="color: #000; font-size: 24px; float: right;" onclick="close_click()" class="nav-link" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                        <div class="heading-content my-4 py-3" >
+                            <h3>Rental</h3>
+                            <h3>from &dollar;99</h3>
+                            <h6>per night</h6>
+                        </div>
+                        <form action="" class="form-1">
+                            <div class="form-group">
+                                <label> <i class="fa fa-calendar-check-o"></i> Check In</label>
+                                <input class="form-control" name="checkin" type="text" placeholder="DD MM YYYY">
+                            </div>
+                            <div class="form-group">
+                                <label> <i class="fa fa-calendar-o"></i> Check Out</label>
+                                <input class="form-control" name="checkout" type="text" placeholder="DD MM YYYY">
+                            </div>
+                            <div class="form-group">
+                                <label> <i class="fa fa-male"></i> Adults</label>
+                                <input class="form-control" name="adults" type="number" value="1" min='1' max='6'>
+                            </div>
+                            <div class="form-group">
+                                <label> <i class="fa fa-child"></i> Kids</label>
+                                <input class="form-control" name="kids" type="number" value="0" min='1' max='6'>
+                            </div>
+                            <button class="form-control"><i class="fa fa-search"></i> Search availabilty</button>
+                        </form>
+                        <nav >
+                            <a href="#apartment"><i class="fa fa-building"></i> Apartment</a>
+                            <a href="javascript:void(0)" href="" onclick="open_click()"><i class="fa fa-rss"></i> Subscribe</a>
+                            <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+                        </nav>
+                    </div>
+                </div>
+                    
+            </aside>
+    
+            <article class="px-3">
+                <section id="apartment" class="article-1">
+                    <h2 class="mt-3 mb-3 text-success">The Apartment</h2>
+                    <img class="col-12" src="./assets/image/slider1.jpg" alt="">
+                    <div class="slider row mt-2 px-4" >
+                        <img class="px-2" src="./assets/image/slider1.jpg" alt="" class="pr-1">
+                        <img class="px-2" src="./assets/image/slider2.jpg" alt="" class="px-1">
+                        <img class="px-2" src="./assets/image/slider3.jpg" alt="" class="px-1">
+                        <img class="px-2" src="./assets/image/slider4.jpg" alt="" class="pl-1">
+                    </div>
+                </section>
+    
+                <section class="article-2">
+                    <div class="part">
+                        <h4 class="mt-3"><b>The space</b></h4>
+                        <div class="part-content d-flex pt-4 pb-4">
+                            <div class="col-6">
+                                <p><i class="fa fa-male"></i> Max people: 4</p>
+                                <p><i class="fa fa-bath"></i> Bathrooms: 2</p>
+                                <p><i class="fa fa-bed"></i> Bedrooms: 1</p>
+                            </div>
+                            <div class="col-6">
+                                <p><i class="fa fa-clock-o"></i> Check In: After 3PM</p>
+                                <p><i class="fa fa-clock-o"></i> Check Out: 12PM</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="part">
+                        <h4 class="mt-3"><b>Extra Info</b></h4>
+                        <div class="part-content pt-4 pb-4">
+                            <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <p>We accept: 
+                                <i class="fa fa-credit-card"></i>
+                                <i class="fa fa-cc-mastercard"></i>
+                                <i class="fa fa-cc-amex"></i>
+                                <i class="fa fa-cc-paypal"></i>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="part">
+                        <h4 class="mt-3"><b>Rules</b></h4>
+                        <div class="part-content pt-4 pb-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>WSubscribe to receive updates on available dates and special offers.</p>
+                            <button onclick="open_click()">Subscribe</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="mt-4">
+                    <h2>Contact</h2>
+                    <p><i class="fa fa-map-marker mr-3"></i>Chicago, US</p>
+                    <p><i class="fa fa-phone mr-3"></i>Phone: +00 151515</p>
+                    <p><i class="fa fa-envelope mr-3"></i>Email: mail@mail.com</p>
+                    <p>Questions? Go ahead, ask them:</p>
+                    <form action="">
+                        <input class="form-group form-control" type="text" placeholder="Name">
+                        <input class="form-group form-control" type="email" placeholder="Email">
+                        <input class="form-group form-control" type="text" placeholder="Message">
+                    </form>
+                </section>
+    
+                <footer class="mt-5">
+                    <p>Powered by<a href="https://www.w3schools.com/w3css/default.asp"> w3.css</a></p>
+                </footer>
+            </article>
+        </main>
+
+
+        <div id="modal">
+            <div class="content-modal">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        
+        var x = document.getElementById('navClick');
+
+        function open_click() {
+                x.style.display = 'block'
+        }
+
+        function close_click() {
+                x.style.display = 'none'
+        }
+
+    </script>
+</body>
+</html>

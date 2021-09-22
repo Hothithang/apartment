@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    color: #fff;
+    background-color: #000;
+    font-size: 24px;
+}
+
+header a:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#navClick {
+    overflow: scroll;
+    display: none;
+    max-width: 270px !important;
+    top: 0 !important;
+    z-index: 5;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+.content-aside {
+    height: 100%;
+    background-color: #f1f1f1;
+    border-left: 1px solid #ccc;
+    z-index: 3;
+}
+
+.heading-content h3,
+.heading-content h6 {
+    font-weight: 400;
+    padding: 8px 0;
+}
+
+
+#mySidebar nav a,
+#navClick nav a {
+    color: #000;
+    display: block;
+    padding: 16px 0;
+}
+
+#mySidebar nav a:hover,
+#navClick nav a:hover,
+#mySidebar .form-1 button:hover,
+#navClick .form-1 button:hover {
+    text-decoration: none;
+    background-color: #ccc;
+    color: #000;
+}
+
+#mySidebar .form-1 button,
+#navClick .form-1 button {
+    padding: 0 !important;
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+
+.container {
+    border-right: 1px solid #ccc;
+}
+.content-article {
+    
+}
+
+section .slider img {
+    width: 25%;
+    opacity: 0.6;
+}
+
+.part button {
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    width: 30vh;
+    padding: 12px;
+}
+
+.part button:hover {
+    color: #000;
+    background-color: #ccc;
+}

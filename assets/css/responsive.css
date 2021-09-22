@@ -1,0 +1,55 @@
+
+/* Màn hình rất nhỏ*/
+@media screen and (max-width: 600px) {
+    
+      
+}
+  
+  /* Màn hình nhỏ*/
+  @media screen and (min-width: 600px){
+    
+  }
+  
+  /* Màn hình trung bình*/
+  @media screen and (min-width: 768px) {
+    
+  }
+  
+  /* Màn hình lớn*/
+  @media screen and (min-width: 992px) {
+
+    .navbar {
+        display: none;
+    }
+
+    #navClick > a {
+      display: none;
+    }
+
+    #navClick {
+      display: block !important;
+    }
+
+    article {
+      margin-left: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+      
+
+    #navClick {
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 5;
+    }
+
+    
+
+  }
+  
+  /* Màn hình rất lớn*/
+  @media screen and (min-width: 1200px) {
+    
+  }
+  
