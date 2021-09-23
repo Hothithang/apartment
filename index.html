@@ -20,11 +20,12 @@
                 <a onclick="open_click()" href="javascript:void(0)"><i class="fa fa-bars text-white p-3"></i></a>
             </nav>
         </header> 
-
+        
+        <div id="bg-side"></div>
         <main class="row">
             <aside class="">
                 <div class="content-aside">
-                    <div id="navClick" class="fixed content-aside px-4"> 
+                    <div id="navClick" class="content-aside px-4"> 
                         <a style="color: #000; font-size: 24px; float: right;" onclick="close_click()" class="nav-link" href="javascript:void(0)"><i class="fa fa-times"></i></a>
                         <div class="heading-content my-4 py-3" >
                             <h3>Rental</h3>
@@ -63,12 +64,15 @@
             <article class="px-3">
                 <section id="apartment" class="article-1">
                     <h2 class="mt-3 mb-3 text-success">The Apartment</h2>
-                    <img class="col-12" src="./assets/image/slider1.jpg" alt="">
+                    <img class="mySlides col-12" src="./assets/image/slider1.jpg" alt="">
+                    <img class="mySlides col-12" src="./assets/image/slider2.jpg" alt="">
+                    <img class="mySlides col-12" src="./assets/image/slider3.jpg" alt="">
+                    <img class="mySlides col-12" src="./assets/image/slider4.jpg" alt="">
                     <div class="slider row mt-2 px-4" >
-                        <img class="px-2" src="./assets/image/slider1.jpg" alt="" class="pr-1">
-                        <img class="px-2" src="./assets/image/slider2.jpg" alt="" class="px-1">
-                        <img class="px-2" src="./assets/image/slider3.jpg" alt="" class="px-1">
-                        <img class="px-2" src="./assets/image/slider4.jpg" alt="" class="pl-1">
+                        <img class="demo px-2" onclick="currentDiv(1)" src="./assets/image/slider1.jpg" alt="">
+                        <img class="demo px-2" onclick="currentDiv(2)" src="./assets/image/slider2.jpg" alt="">
+                        <img class="demo px-2" onclick="currentDiv(3)" src="./assets/image/slider3.jpg" alt="">
+                        <img class="demo px-2" onclick="currentDiv(4)"src="./assets/image/slider4.jpg" alt="">
                     </div>
                 </section>
     
@@ -111,7 +115,7 @@
                                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                             <p>WSubscribe to receive updates on available dates and special offers.</p>
-                            <button onclick="open_click()">Subscribe</button>
+                            <button onclick="open_Modal()">Subscribe</button>
                         </div>
                     </div>
                 </section>
@@ -138,8 +142,14 @@
 
 
         <div id="modal">
-            <div class="content-modal">
-                
+            <div class="text-center content-modal p-4" >
+                <div class="desc-sub container">
+                    <i onclick="close_Modal()" class="fa fa-times float-right" style="font-size: 30px; cursor: pointer;"></i>
+                    <h2>SUBSCRIBE</h2>
+                    <p>Join our mailing list to receive updates on available dates and special offers.</p>
+                    <input class="form-control mb-3" type="text" name="email" placeholder="Enter e-mail">
+                    <button onclick="close_Modal()">Subscribe</button>
+                </div>
             </div>
         </div>
     </div>
@@ -147,16 +157,50 @@
 
     <script>
         
+        // OPEN_CLOSE
         var x = document.getElementById('navClick');
+        var y = document.getElementById('bg-side');
+        var z = document.getElementById('modal');
 
         function open_click() {
-                x.style.display = 'block'
+                x.style.display = 'block';
+                y.style.display = 'block';
         }
 
         function close_click() {
-                x.style.display = 'none'
+                x.style.display = 'none';
+                y.style.display = 'none';
+        } 
+
+        function open_Modal() {
+                z.style.display = 'block';
         }
 
+        function close_Modal() {
+                z.style.display = 'none';
+        } 
+
+        // MYSLIDER
+        var index = 1;
+        showDivs(index);
+
+        function currentDiv(n) {
+            showDivs(index = n);
+        }
+
+        function showDivs(n) {
+            var i, msl = document.getElementsByClassName("mySlides"), plus = document.getElementsByClassName('demo');
+            for(i = 0; i < msl.length; i++) {
+                msl[i].style.display = "none"; 
+            }
+
+            for(i = 0; i < plus.length; i++) {
+                plus[i].className = plus[i].className.replace(" opacity-1", " ");
+            }
+            msl[index-1].style.display = 'block';
+            plus[index-1].className += " opacity-1";
+        }
+        
     </script>
 </body>
 </html>

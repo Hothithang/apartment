@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 header {
     color: #fff;
     background-color: #000;
@@ -17,74 +15,96 @@ header a:hover {
     background-color: #ccc;
 }
 
-#navClick {
-    overflow: scroll;
-    display: none;
-    max-width: 270px !important;
-    top: 0 !important;
-    z-index: 5;
-}
-
-.fixed {
-    position: fixed !important;
-}
-
-.content-aside {
+aside .content-aside {
     height: 100%;
     background-color: #f1f1f1;
     border-left: 1px solid #ccc;
     z-index: 3;
 }
 
-.heading-content h3,
-.heading-content h6 {
-    font-weight: 400;
-    padding: 8px 0;
-}
+    .content-aside #navClick {
+        position: fixed;
+        overflow: scroll;
+        display: none;
+        top: 0 !important;
+        z-index: 5;
+    }
 
+    #navClick .heading-content h3,
+    #navClick .heading-content h6 {
+        font-weight: 400;
+        padding: 8px 0;
+    }
 
-#mySidebar nav a,
-#navClick nav a {
-    color: #000;
-    display: block;
-    padding: 16px 0;
-}
+    #navClick nav a {
+        color: #000;
+        display: block;
+        padding: 16px 0;
+    }
 
-#mySidebar nav a:hover,
-#navClick nav a:hover,
-#mySidebar .form-1 button:hover,
-#navClick .form-1 button:hover {
-    text-decoration: none;
-    background-color: #ccc;
-    color: #000;
-}
+    #navClick .form-1 button {
+        padding: 0 !important;
+        color: #fff;
+        background-color: #4CAF50;
+    }
 
-#mySidebar .form-1 button,
-#navClick .form-1 button {
-    padding: 0 !important;
-    color: #fff;
-    background-color: #4CAF50;
-}
-
+    #navClick nav a:hover,
+    #navClick .form-1 button:hover {
+        text-decoration: none;
+        background-color: #ccc;
+        color: #000;
+    }
 
 .container {
     border-right: 1px solid #ccc;
 }
-section .slider img {
-    width: 25%;
-    opacity: 0.6;
+
+    section .slider img {
+        width: 25%;
+        opacity: 0.6;
+    }
+
+    section .part button,
+    #contact button,
+    .content-modal button {
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        width: 30vh;
+        padding: 10px;
+    }
+
+    section .part button:hover,
+    .content-modal button:hover {
+        color: #000;
+        background-color: #ccc;
+    }
+
+
+
+/* MYSLIDER */
+.mySlides {
+    display: none;
 }
 
-.part button,
-#contact button{
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    width: 30vh;
-    padding: 10px;
+.opacity-1 {
+    opacity: 1 !important;
 }
 
-.part button:hover {
-    color: #000;
-    background-color: #ccc;
+
+/* MYSLIDER */
+
+#modal {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal .content-modal {
+    margin-top: 30vh;
+    background-color: #fff;
 }
