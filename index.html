@@ -13,7 +13,7 @@
     <title>Apartment</title>
 </head>
 <body>
-    <div class="container">
+    <div class="">
         <header class="">
             <nav class="navbar navbar-expand-lg">
                 <p>Rental</p>
@@ -21,8 +21,7 @@
             </nav>
         </header> 
         
-        <div id="bg-side"></div>
-        <main class="row">
+        <main class="container">
             <aside class="">
                 <div class="content-aside">
                     <div id="navClick" class="content-aside px-4"> 
@@ -53,7 +52,7 @@
                         </form>
                         <nav >
                             <a href="#apartment"><i class="fa fa-building"></i> Apartment</a>
-                            <a href="javascript:void(0)" href="" onclick="open_click()"><i class="fa fa-rss"></i> Subscribe</a>
+                            <a href="javascript:void(0)" href="" onclick="open_Modal()"><i class="fa fa-rss"></i> Subscribe</a>
                             <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
                         </nav>
                     </div>
@@ -140,8 +139,9 @@
             </article>
         </main>
 
+        <div id="bg-side"></div>
 
-        <div id="modal">
+        <div id="modal" >
             <div class="text-center content-modal p-4" >
                 <div class="desc-sub container">
                     <i onclick="close_Modal()" class="fa fa-times float-right" style="font-size: 30px; cursor: pointer;"></i>
@@ -174,10 +174,12 @@
 
         function open_Modal() {
                 z.style.display = 'block';
+                y.style.display = 'block';
         }
 
         function close_Modal() {
                 z.style.display = 'none';
+                y.style.display = 'none';
         } 
 
         // MYSLIDER
