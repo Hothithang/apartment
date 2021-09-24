@@ -103,10 +103,10 @@ aside .content-aside {
     bottom: 0;
     position: fixed;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 30vh;
 }
 
 #modal .content-modal {
-    margin-top: 30vh;
+    margin: auto;
     background-color: #fff;
 }
